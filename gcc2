@@ -1,0 +1,12 @@
+#! /bin/bash
+
+if [ "$1" == "test" ];
+then
+g++ -g -DTEST ./lib/Lib.cpp ./lib/Log.cpp Hidden_Markov_Model.cpp main.cpp -o PST
+else
+g++ -g ./lib/Lib.cpp ./lib/Log.cpp Hidden_Markov_Model.cpp main.cpp -o PST
+fi
+mv PST ../bin/
+
+#gcc -lstdc++ -c Hidden_Markov_Model.cpp
+#gcc -lstdc++ Hidden_Markov_Model.o test.cpp -o test
